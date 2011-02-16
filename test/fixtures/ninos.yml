@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  estado_padrinazgo: MyString
+  fecha_nac: 2011-02-15
+  sexo: MyString
+  pnombre: MyString
+  snombre: MyString
+  papellido: MyString
+  sappellido: MyString
+  habita_con: MyString
+
+two:
+  estado_padrinazgo: MyString
+  fecha_nac: 2011-02-15
+  sexo: MyString
+  pnombre: MyString
+  snombre: MyString
+  papellido: MyString
+  sappellido: MyString
+  habita_con: MyString

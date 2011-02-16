@@ -1,0 +1,137 @@
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (34.6ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.9ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (13.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateNinos (20110216021106)
+  [1m[35mSQL (6.3ms)[0m  CREATE TABLE `ninos` (`codigo` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `estado_padrinazgo` varchar(255), `fecha_nac` date, `sexo` varchar(255), `pnombre` varchar(255), `snombre` varchar(255), `papellido` varchar(255), `sappellido` varchar(255), `habita_con` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110216021106')[0m
+  [1m[35mSQL (1.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (2.0ms)[0m  [1mdescribe `ninos`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `ninos`
+
+
+Started GET "/" for 127.0.0.1 at Tue Feb 15 20:23:35 -0600 2011
+  Processing by NinoController#index as HTML
+Rendered nino/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 55ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+  [1m[36mNino Load (0.8ms)[0m  [1mSELECT `ninos`.* FROM `ninos`[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateNinos (20110216021106)
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (4.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (3.4ms)[0m  [1mdescribe `ninos`[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW KEYS FROM `ninos`
+  [1m[36mNino Load (0.3ms)[0m  [1mSELECT `ninos`.* FROM `ninos`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (2.3ms)[0m  describe `ninos`
+  [1m[36mAREL (0.9ms)[0m  [1mINSERT INTO `ninos` (`estado_padrinazgo`, `sappellido`, `pnombre`, `updated_at`, `fecha_nac`, `habita_con`, `sexo`, `papellido`, `snombre`, `created_at`, `codigo`) VALUES (NULL, NULL, NULL, '2011-02-16 02:30:03', NULL, NULL, NULL, NULL, NULL, '2011-02-16 02:30:03', NULL)[0m
+  [1m[35mSQL (2.2ms)[0m  COMMIT
+  [1m[36mNino Load (0.7ms)[0m  [1mSELECT `ninos`.* FROM `ninos`[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO `ninos` (`estado_padrinazgo`, `sappellido`, `pnombre`, `updated_at`, `fecha_nac`, `habita_con`, `sexo`, `papellido`, `snombre`, `created_at`, `codigo`) VALUES (NULL, NULL, NULL, '2011-02-16 02:35:52', NULL, NULL, NULL, NULL, NULL, '2011-02-16 02:35:52', 35)
+  [1m[36mSQL (7.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mNino Load (0.7ms)[0m  [1mSELECT `ninos`.* FROM `ninos`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (1.2ms)[0m  [1mINSERT INTO `ninos` (`estado_padrinazgo`, `sappellido`, `pnombre`, `updated_at`, `fecha_nac`, `habita_con`, `sexo`, `papellido`, `snombre`, `created_at`, `codigo`) VALUES (NULL, NULL, NULL, '2011-02-16 02:36:18', NULL, NULL, NULL, NULL, NULL, '2011-02-16 02:36:18', NULL)[0m
+  [1m[35mSQL (9.9ms)[0m  COMMIT
+  [1m[36mNino Load (0.7ms)[0m  [1mSELECT `ninos`.* FROM `ninos`[0m
+  [1m[36mNino Load (0.3ms)[0m  [1mSELECT `ninos`.* FROM `ninos`[0m
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (8.4ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (22.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.9ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateNinos (20110216021106)
+  [1m[35mSQL (9.3ms)[0m  CREATE TABLE `ninos` (`codigo` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `estado_padrinazgo` varchar(255), `fecha_nac` date, `sexo` varchar(255), `pnombre` varchar(255), `snombre` varchar(255), `papellido` varchar(255), `sappellido` varchar(255), `habita_con` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110216021106')[0m
+  [1m[35mSQL (1.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (2.2ms)[0m  [1mdescribe `ninos`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `ninos`
+  [1m[36mNino Load (0.6ms)[0m  [1mSELECT `ninos`.* FROM `ninos`[0m
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (2.6ms)[0m  [1mdescribe `ninos`[0m
+  [1m[35mAREL (0.7ms)[0m  INSERT INTO `ninos` (`habita_con`, `papellido`, `updated_at`, `fecha_nac`, `created_at`, `pnombre`, `estado_padrinazgo`, `snombre`, `codigo`, `sappellido`, `sexo`) VALUES (NULL, NULL, '2011-02-16 03:11:38', NULL, '2011-02-16 03:11:38', NULL, NULL, NULL, 0, NULL, NULL)
+  [1m[36mSQL (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (2.3ms)[0m  [1mROLLBACK[0m
+  [1m[35mNino Load (0.7ms)[0m  SELECT `ninos`.* FROM `ninos`
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mNino Load (0.5ms)[0m  [1mSELECT `ninos`.* FROM `ninos`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (7.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO `ninos` (`habita_con`, `papellido`, `updated_at`, `fecha_nac`, `created_at`, `pnombre`, `estado_padrinazgo`, `snombre`, `codigo`, `sappellido`, `sexo`) VALUES (NULL, NULL, '2011-02-16 03:21:09', NULL, '2011-02-16 03:21:09', NULL, NULL, NULL, 87, NULL, NULL)[0m
+  [1m[35mSQL (4.5ms)[0m  COMMIT
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO `ninos` (`habita_con`, `papellido`, `updated_at`, `fecha_nac`, `created_at`, `pnombre`, `estado_padrinazgo`, `snombre`, `codigo`, `sappellido`, `sexo`) VALUES (NULL, NULL, '2011-02-16 03:22:05', NULL, '2011-02-16 03:22:05', NULL, 'sin padrinazgo', NULL, 89, NULL, NULL)
+  [1m[36mSQL (3.3ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for 127.0.0.1 at Tue Feb 15 21:22:40 -0600 2011
+  Processing by NinoController#index as HTML
+  [1m[36mNino Load (0.8ms)[0m  [1mSELECT `ninos`.* FROM `ninos`[0m
+Rendered nino/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 219ms (Views: 25.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Feb 15 21:22:42 -0600 2011
+  Processing by NinoController#index as HTML
+  [1m[35mNino Load (0.6ms)[0m  SELECT `ninos`.* FROM `ninos`
+Rendered nino/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 148ms (Views: 66.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/index" for 127.0.0.1 at Tue Feb 15 21:22:51 -0600 2011
+
+ActionController::RoutingError (No route matches "/index"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.7ms)
+
+
+Started GET "/nino/index" for 127.0.0.1 at Tue Feb 15 21:22:57 -0600 2011
+
+ActionController::RoutingError (No route matches "/nino/index"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.5ms)
+
+
+Started GET "/index" for 127.0.0.1 at Tue Feb 15 21:24:32 -0600 2011
+  Processing by NinoController#index as HTML
+  [1m[36mNino Load (0.4ms)[0m  [1mSELECT `ninos`.* FROM `ninos`[0m
+Rendered nino/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 122ms (Views: 20.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/index.xls" for 127.0.0.1 at Tue Feb 15 21:24:38 -0600 2011
+  Processing by NinoController#index as XLS
+  [1m[35mNino Load (0.5ms)[0m  SELECT `ninos`.* FROM `ninos`
+Rendered text template (0.0ms)
+Sent data ninos.xls (29.0ms)
+Completed 200 OK in 324ms (Views: 28.4ms | ActiveRecord: 0.5ms)
