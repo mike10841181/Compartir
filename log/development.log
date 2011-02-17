@@ -135,3 +135,329 @@ Started GET "/index.xls" for 127.0.0.1 at Tue Feb 15 21:24:38 -0600 2011
 Rendered text template (0.0ms)
 Sent data ninos.xls (29.0ms)
 Completed 200 OK in 324ms (Views: 28.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Feb 15 22:10:13 -0600 2011
+  Processing by NinoController#index as HTML
+  [1m[36mNino Load (0.4ms)[0m  [1mSELECT `ninos`.* FROM `ninos`[0m
+Rendered nino/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 241ms (Views: 24.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Feb 15 22:10:14 -0600 2011
+  Processing by NinoController#index as HTML
+  [1m[35mNino Load (0.3ms)[0m  SELECT `ninos`.* FROM `ninos`
+Rendered nino/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 59ms (Views: 40.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/index" for 127.0.0.1 at Tue Feb 15 22:15:32 -0600 2011
+  Processing by NinoController#index as HTML
+  [1m[36mNino Load (0.7ms)[0m  [1mSELECT `ninos`.* FROM `ninos`[0m
+Rendered nino/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 103ms (Views: 46.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/index.xls" for 127.0.0.1 at Tue Feb 15 22:17:36 -0600 2011
+  Processing by NinoController#index as XLS
+  [1m[35mNino Load (0.6ms)[0m  SELECT `ninos`.* FROM `ninos`
+Rendered text template (0.0ms)
+Sent data ninos.xls (24.0ms)
+Completed 200 OK in 418ms (Views: 23.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/index.xls" for 127.0.0.1 at Tue Feb 15 22:30:28 -0600 2011
+  Processing by NinoController#index as XLS
+  [1m[36mNino Load (1.4ms)[0m  [1mSELECT `ninos`.* FROM `ninos`[0m
+Rendered text template (0.0ms)
+Sent data ninos.xls (5.7ms)
+Completed 200 OK in 328ms (Views: 5.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/index.xls" for 127.0.0.1 at Tue Feb 15 22:31:39 -0600 2011
+
+SyntaxError (/home/jose/Dropbox/Clases/BaseDatos/app/controllers/nino_controller.rb:7: syntax error, unexpected tIDENTIFIER, expecting '}'
+...odigo,:pnombre,:snombre])_data, :filename => 'ninos.xls' }
+                              ^
+/home/jose/Dropbox/Clases/BaseDatos/app/controllers/nino_controller.rb:7: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+...,:snombre])_data, :filename => 'ninos.xls' }
+                              ^):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.5ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (25.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (68.1ms)
+
+
+Started GET "/.xls" for 127.0.0.1 at Wed Feb 16 16:55:27 -0600 2011
+  Processing by NinoController#index as XLS
+  [1m[36mNino Load (12.0ms)[0m  [1mSELECT `ninos`.* FROM `ninos`[0m
+Rendered text template (0.0ms)
+Sent data ninos.xls (11.4ms)
+Completed 200 OK in 318ms (Views: 10.9ms | ActiveRecord: 12.0ms)
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mNino Load (0.4ms)[0m  SELECT `ninos`.* FROM `ninos`
+  [1m[36mNino Load (0.7ms)[0m  [1mselect *,count(*) from nino[0m
+Mysql2::Error: Table 'AsocCompartir_development.nino' doesn't exist: select *,count(*) from nino
+  [1m[35mSQL (0.4ms)[0m  SELECT * FROM *
+Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*' at line 1: SELECT * FROM *
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT * FROM *;[0m
+Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*' at line 1: SELECT * FROM *;
+  [1m[35mSQL (0.6ms)[0m  SELECT * FROM AsocCompartir_development
+Mysql2::Error: Table 'AsocCompartir_development.AsocCompartir_development' doesn't exist: SELECT * FROM AsocCompartir_development
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT * FROM AsocCompartir.AsocCompartir_development[0m
+Mysql2::Error: SELECT command denied to user 'compartir'@'localhost' for table 'AsocCompartir_development': SELECT * FROM AsocCompartir.AsocCompartir_development
+  [1m[35mSQL (0.6ms)[0m  SELECT * FROM AsocCompartir.AsocCompartir_development
+Mysql2::Error: Table 'AsocCompartir.AsocCompartir_development' doesn't exist: SELECT * FROM AsocCompartir.AsocCompartir_development
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT * FROM AsocCompartir.AsocCompartir_test[0m
+Mysql2::Error: Table 'AsocCompartir.AsocCompartir_test' doesn't exist: SELECT * FROM AsocCompartir.AsocCompartir_test
+  [1m[35mSQL (0.5ms)[0m  SELECT * FROM AsocCompartir.AsocCompartir_test
+Mysql2::Error: Table 'AsocCompartir.AsocCompartir_test' doesn't exist: SELECT * FROM AsocCompartir.AsocCompartir_test
+
+
+Started GET "/index.xls" for 127.0.0.1 at Wed Feb 16 17:06:25 -0600 2011
+  Processing by NinoController#index as XLS
+  [1m[36mNino Load (0.7ms)[0m  [1mSELECT codigo,pnombre FROM `ninos`[0m
+Rendered text template (0.0ms)
+Sent data ninos.xls (5.5ms)
+Completed 200 OK in 202ms (Views: 4.9ms | ActiveRecord: 0.7ms)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (8.2ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.9ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (7.5ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateNinos (20110216021106)
+  [1m[35mSQL (5.3ms)[0m  CREATE TABLE `ninos` (`codigo` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `estado_padrinazgo` varchar(255), `fecha_nac` date, `sexo` varchar(255), `pnombre` varchar(255), `snombre` varchar(255), `papellido` varchar(255), `sappellido` varchar(255), `habita_con` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110216021106')[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `ninos`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `ninos`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (8.1ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (7.4ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateNinos (20110216021106)
+  [1m[35mSQL (5.2ms)[0m  CREATE TABLE `ninos` (`codigo` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `estado_padrinazgo` varchar(255), `fecha_nac` date, `sexo` varchar(255), `pnombre` varchar(255), `snombre` varchar(255), `papellido` varchar(255), `sappellido` varchar(255), `habita_con` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110216021106')[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (2.0ms)[0m  [1mdescribe `ninos`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `ninos`
+
+
+Started GET "/index" for 127.0.0.1 at Wed Feb 16 17:36:10 -0600 2011
+  Processing by NinoController#index as HTML
+  [1m[36mNino Load (0.7ms)[0m  [1mSELECT codigo,pnombre FROM `ninos`[0m
+Completed   in 106ms
+
+NameError (uninitialized constant Mime::DB):
+  app/controllers/nino_controller.rb:7
+  app/controllers/nino_controller.rb:4:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.3ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (17.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at Wed Feb 16 17:36:11 -0600 2011
+  Processing by NinoController#index as HTML
+  [1m[35mNino Load (0.3ms)[0m  SELECT codigo,pnombre FROM `ninos`
+Completed   in 28ms
+
+NameError (uninitialized constant Mime::DB):
+  app/controllers/nino_controller.rb:7
+  app/controllers/nino_controller.rb:4:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.6ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (17.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.8ms)
+
+
+Started GET "/index.xls" for 127.0.0.1 at Wed Feb 16 17:42:39 -0600 2011
+  Processing by NinoController#index as XLS
+  [1m[36mNino Load (0.3ms)[0m  [1mSELECT codigo,pnombre FROM `ninos`[0m
+Completed   in 103ms
+
+NameError (uninitialized constant Mime::DB):
+  app/controllers/nino_controller.rb:7
+  app/controllers/nino_controller.rb:4:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (17.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (32.9ms)
+
+
+Started GET "/index.xls" for 127.0.0.1 at Wed Feb 16 17:43:13 -0600 2011
+  Processing by NinoController#index as XLS
+  [1m[36mNino Load (0.5ms)[0m  [1mSELECT codigo,pnombre FROM `ninos`[0m
+Rendered text template (0.0ms)
+Sent data ninos.xls (5.6ms)
+Completed 200 OK in 173ms (Views: 5.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/index.db" for 127.0.0.1 at Wed Feb 16 17:44:48 -0600 2011
+  Processing by NinoController#index as DB
+  [1m[36mNino Load (0.3ms)[0m  [1mSELECT codigo,pnombre FROM `ninos`[0m
+Completed   in 98ms
+
+TypeError (can't convert Hash into String):
+  app/controllers/nino_controller.rb:7:in `system'
+  app/controllers/nino_controller.rb:7
+  app/controllers/nino_controller.rb:4:in `index'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.3ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (17.3ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (33.1ms)
+
+
+Started GET "/index" for 127.0.0.1 at Wed Feb 16 17:45:32 -0600 2011
+  Processing by NinoController#index as HTML
+  [1m[36mNino Load (0.3ms)[0m  [1mSELECT codigo,pnombre FROM `ninos`[0m
+Rendered nino/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 144ms (Views: 44.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/index.db" for 127.0.0.1 at Wed Feb 16 17:45:38 -0600 2011
+  Processing by NinoController#index as DB
+  [1m[35mNino Load (0.4ms)[0m  SELECT codigo,pnombre FROM `ninos`
+Rendered text template (0.0ms)
+Sent data  (5.9ms)
+Completed 200 OK in 51478ms (Views: 5.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/index.xls" for 127.0.0.1 at Wed Feb 16 17:46:30 -0600 2011
+  Processing by NinoController#index as XLS
+  [1m[36mNino Load (0.3ms)[0m  [1mSELECT codigo,pnombre FROM `ninos`[0m
+Rendered text template (0.0ms)
+Sent data ninos.xls (3.9ms)
+Completed 200 OK in 95ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/index.xls" for 127.0.0.1 at Wed Feb 16 17:46:30 -0600 2011
+  Processing by NinoController#index as XLS
+  [1m[35mNino Load (0.3ms)[0m  SELECT codigo,pnombre FROM `ninos`
+Rendered text template (0.0ms)
+Sent data ninos.xls (3.6ms)
+Completed 200 OK in 94ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/index.db" for 127.0.0.1 at Wed Feb 16 17:46:30 -0600 2011
+  Processing by NinoController#index as DB
+  [1m[36mNino Load (0.3ms)[0m  [1mSELECT codigo,pnombre FROM `ninos`[0m
+Rendered text template (0.0ms)
+Sent data  (6.4ms)
+Completed 200 OK in 54838ms (Views: 5.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/index.xls" for 127.0.0.1 at Wed Feb 16 17:47:25 -0600 2011
+  Processing by NinoController#index as XLS
+  [1m[35mNino Load (0.3ms)[0m  SELECT codigo,pnombre FROM `ninos`
+Rendered text template (0.0ms)
+Sent data ninos.xls (3.5ms)
+Completed 200 OK in 93ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/index.db" for 127.0.0.1 at Wed Feb 16 17:48:06 -0600 2011
+  Processing by NinoController#index as DB
+  [1m[36mNino Load (0.3ms)[0m  [1mSELECT codigo,pnombre FROM `ninos`[0m
+Rendered text template (0.0ms)
+Sent data  (6.4ms)
+Completed 200 OK in 132ms (Views: 5.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/index.db" for 127.0.0.1 at Wed Feb 16 17:49:22 -0600 2011
+  Processing by NinoController#index as DB
+  [1m[36mNino Load (0.5ms)[0m  [1mSELECT codigo,pnombre FROM `ninos`[0m
+Rendered text template (0.0ms)
+Sent data  (6.5ms)
+Completed 200 OK in 145ms (Views: 5.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/index.db" for 127.0.0.1 at Wed Feb 16 17:51:19 -0600 2011
+  Processing by NinoController#index as DB
+  [1m[36mNino Load (0.3ms)[0m  [1mSELECT codigo,pnombre FROM `ninos`[0m
+Completed   in 180ms
+
+ActionView::MissingTemplate (Missing template nino/index with {:formats=>[:db], :handlers=>[:rjs, :rhtml, :builder, :rxml, :erb], :locale=>[:en, :en]} in view paths "/home/jose/Dropbox/Clases/BaseDatos/app/views"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (2.6ms)
+
+
+Started GET "/index." for 127.0.0.1 at Wed Feb 16 17:51:30 -0600 2011
+
+ActionController::RoutingError (No route matches "/index."):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.3ms)
+
+
+Started GET "/index" for 127.0.0.1 at Wed Feb 16 17:51:32 -0600 2011
+  Processing by NinoController#index as HTML
+  [1m[35mNino Load (0.3ms)[0m  SELECT codigo,pnombre FROM `ninos`
+Rendered nino/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 46ms (Views: 22.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/index.db" for 127.0.0.1 at Wed Feb 16 17:51:35 -0600 2011
+  Processing by NinoController#index as DB
+  [1m[36mNino Load (0.3ms)[0m  [1mSELECT codigo,pnombre FROM `ninos`[0m
+Completed   in 73ms
+
+ActionView::MissingTemplate (Missing template nino/index with {:formats=>[:db], :handlers=>[:rjs, :rhtml, :builder, :rxml, :erb], :locale=>[:en, :en]} in view paths "/home/jose/Dropbox/Clases/BaseDatos/app/views"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (3.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at Wed Feb 16 17:52:23 -0600 2011
+  Processing by NinoController#index as HTML
+  [1m[36mNino Load (0.3ms)[0m  [1mSELECT codigo,pnombre FROM `ninos`[0m
+Rendered nino/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 120ms (Views: 21.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/index" for 127.0.0.1 at Wed Feb 16 17:52:25 -0600 2011
+  Processing by NinoController#index as HTML
+  [1m[35mNino Load (0.3ms)[0m  SELECT codigo,pnombre FROM `ninos`
+Rendered nino/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 37ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/index.db" for 127.0.0.1 at Wed Feb 16 17:52:29 -0600 2011
+  Processing by NinoController#index as DB
+  [1m[36mNino Load (0.3ms)[0m  [1mSELECT codigo,pnombre FROM `ninos`[0m
+Rendered text template (0.0ms)
+Sent data  (6.1ms)
+Completed 200 OK in 64ms (Views: 5.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/index" for 127.0.0.1 at Wed Feb 16 18:32:08 -0600 2011
+  Processing by NinoController#index as HTML
+  [1m[36mNino Load (17.2ms)[0m  [1mSELECT codigo,pnombre FROM `ninos`[0m
+Rendered nino/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 171ms (Views: 24.1ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/index.xls" for 127.0.0.1 at Wed Feb 16 18:32:15 -0600 2011
+  Processing by NinoController#index as XLS
+  [1m[35mNino Load (0.3ms)[0m  SELECT codigo,pnombre FROM `ninos`
+Rendered text template (0.0ms)
+Sent data ninos.xls (21.3ms)
+Completed 200 OK in 104ms (Views: 20.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/index.xls" for 127.0.0.1 at Wed Feb 16 18:34:30 -0600 2011
+  Processing by NinoController#index as XLS
+  [1m[36mNino Load (0.3ms)[0m  [1mSELECT codigo,pnombre FROM `ninos`[0m
+Rendered text template (0.0ms)
+Sent data ninos.xls (3.4ms)
+Completed 200 OK in 88ms (Views: 2.9ms | ActiveRecord: 0.3ms)

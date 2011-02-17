@@ -8,7 +8,7 @@ class CreateNinos < ActiveRecord::Migration
       t.string :pnombre
       t.string :snombre
       t.string :papellido
-      t.string :sappellido
+      t.string :sapellido
       t.string :habita_con
 
       t.timestamps
